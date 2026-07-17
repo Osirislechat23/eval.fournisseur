@@ -80,21 +80,7 @@
   .brand h1{font-size:20px; margin:0; letter-spacing:.02em; font-weight:600;}
   .brand p{margin:2px 0 0; font-size:12px; color:#B9C2D6; letter-spacing:.04em;}
   .top-actions{display:flex; gap:8px;}
-
-  .space-switcher{
-    display:flex; gap:4px; max-width:1100px; margin:14px auto 0; background:#12213D;
-    border-radius:8px; padding:4px;
-  }
-  .space-btn{
-    flex:1; display:flex; align-items:center; justify-content:center; gap:7px;
-    background:transparent; border:none; color:#AEB9D4; font-family:'IBM Plex Sans',sans-serif;
-    font-size:13.5px; font-weight:600; padding:10px 14px; cursor:pointer; border-radius:6px;
-    transition:background .18s ease, color .18s ease;
-  }
-  .space-btn:hover{color:#fff;}
-  .space-btn.active{background:var(--gold); color:#221904;}
-
-  .view-tabs{display:flex; gap:6px; max-width:1100px; margin:10px auto 0; border-bottom:1px solid #35447A;}
+  .view-tabs{display:flex; gap:6px; max-width:1100px; margin:14px auto 0; border-bottom:1px solid #35447A;}
   .view-tab{
     background:transparent; border:none; color:#AEB9D4; font-family:'IBM Plex Sans',sans-serif;
     font-size:13.5px; font-weight:500; padding:9px 4px; cursor:pointer; position:relative; margin-right:18px;
@@ -123,11 +109,6 @@
   .btn-line:hover{background:color-mix(in srgb, var(--gold) 8%, var(--paper-raised));}
   .btn-danger{background:transparent; color:var(--brick); border-color:transparent; padding:4px 8px; font-size:12px;}
   .btn-danger:hover{text-decoration:underline;}
-  .btn-confirm-armed{
-    background:var(--brick) !important; color:#fff !important; text-decoration:none !important;
-    border-radius:4px; animation:confirmPulse 1s ease-in-out infinite;
-  }
-  @keyframes confirmPulse{ 0%,100%{opacity:1;} 50%{opacity:.72;} }
   input[type=file].btn-line{display:none;}
 
   .layout{display:flex; max-width:1100px; margin:0 auto; min-height:calc(100vh - 90px);}
@@ -216,35 +197,15 @@
   }
   .empty-main h2{font-family:'Fraunces',serif; font-size:22px; color:var(--ink); margin-bottom:6px;}
 
-  .home-greeting{
-    display:flex; align-items:center; gap:16px; margin-bottom:28px; padding-bottom:22px;
-    border-bottom:1px solid var(--line);
-  }
-  .home-greeting-icon{
-    font-size:32px; width:56px; height:56px; flex-shrink:0; display:flex; align-items:center; justify-content:center;
-    background:color-mix(in srgb, var(--gold) 14%, var(--paper-raised)); border-radius:50%;
-  }
-  .home-greeting h2{font-family:'Fraunces',serif; font-size:28px; margin:0 0 3px; letter-spacing:-.01em;}
-  .home-greeting p{color:var(--text-dim); font-size:13.5px; margin:0; text-transform:capitalize;}
-
-  .home-quick-add{display:flex; gap:8px; margin-bottom:30px;}
-  .home-quick-add input{
-    flex:1; padding:13px 16px; border:1px solid var(--line); border-radius:9px;
-    font-family:'IBM Plex Sans'; font-size:14px; background:var(--paper-raised); color:var(--ink);
-    transition:border-color .15s ease;
-  }
-  .home-quick-add input:focus{outline:none; border-color:var(--gold);}
-  .home-quick-add button{border-radius:9px; padding:0 20px; font-size:13.5px;}
+  .home-greeting{margin-bottom:26px;}
+  .home-greeting h2{font-family:'Fraunces',serif; font-size:26px; margin:0 0 4px;}
+  .home-greeting p{color:var(--text-dim); font-size:13px; margin:0; text-transform:capitalize;}
 
   .dash-section-title{
     font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--text-dim);
-    margin:26px 0 14px; font-weight:600; display:flex; align-items:center; gap:8px;
+    margin:26px 0 12px; font-weight:600;
   }
   .dash-section-title:first-of-type{margin-top:0;}
-  .dash-count-badge{
-    background:color-mix(in srgb, var(--gold) 18%, var(--paper)); color:var(--gold);
-    font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:700; padding:1px 8px; border-radius:9px;
-  }
   .dash-grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(150px,1fr)); gap:12px;}
   .dash-card{
     background:var(--paper-raised); border:1px solid var(--line); border-radius:8px;
@@ -255,19 +216,6 @@
   .dash-card-icon{font-size:22px; margin-bottom:8px;}
   .dash-card-count{font-family:'Fraunces',serif; font-weight:600; font-size:26px; color:var(--ink); line-height:1;}
   .dash-card-label{font-size:12.5px; color:var(--text-dim); margin-top:4px;}
-
-  .home-notes-grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(220px,1fr)); gap:14px;}
-  .home-note-card{
-    background:var(--paper-raised); border:1px solid var(--line); border-radius:10px;
-    padding:16px; cursor:pointer; transition:transform .14s ease, box-shadow .14s ease, border-color .14s ease;
-  }
-  .home-note-card:hover{transform:translateY(-3px); box-shadow:0 8px 20px rgba(0,0,0,.09); border-color:var(--gold);}
-  .home-note-card-title{font-family:'Fraunces',serif; font-weight:600; font-size:15px; margin-bottom:7px; color:var(--ink);}
-  .home-note-card-preview{
-    font-size:12.5px; color:var(--text-dim); line-height:1.55; margin-bottom:12px;
-    min-height:38px; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
-  }
-  .home-note-card-date{font-size:10.5px; color:var(--text-dim); text-transform:uppercase; letter-spacing:.04em;}
 
   .activity-list{display:flex; flex-direction:column; gap:2px;}
   .activity-item{
@@ -524,27 +472,6 @@
   }
   .rpg-battle-actions{display:flex; gap:8px; flex-wrap:wrap; justify-content:center;}
 
-  .rpg-shop-title{font-family:'Fraunces',serif; font-weight:600; font-size:17px; text-align:center; margin-top:4px;}
-  .rpg-shop-gold{text-align:center; font-size:12.5px; color:var(--text-dim); margin-bottom:12px;}
-  .rpg-shop-item{
-    display:flex; align-items:center; justify-content:space-between; gap:10px;
-    background:var(--paper-raised); border:1px solid var(--line); border-radius:8px;
-    padding:10px 12px; margin-bottom:8px;
-  }
-  .rpg-shop-item-name{font-weight:600; font-size:13px; color:var(--ink);}
-  .rpg-shop-item-desc{font-size:11.5px; color:var(--text-dim); margin-top:1px;}
-  .rpg-shop-item button{flex-shrink:0; font-size:12.5px; padding:6px 12px;}
-  .rpg-shop-item button:disabled{opacity:.4; cursor:not-allowed;}
-
-  .rpg-difficulty-list{display:flex; flex-direction:column; gap:8px;}
-  .rpg-difficulty-btn{
-    display:block; width:100%; text-align:left; background:var(--paper-raised); border:1px solid var(--line);
-    border-radius:8px; padding:10px 14px; cursor:pointer; transition:border-color .12s ease, transform .12s ease;
-  }
-  .rpg-difficulty-btn:hover{border-color:var(--gold); transform:translateY(-1px);}
-  .rpg-difficulty-name{font-family:'Fraunces',serif; font-weight:600; font-size:14px; color:var(--ink);}
-  .rpg-difficulty-desc{font-size:11px; color:var(--text-dim); margin-top:2px;}
-
   .lib-chip-list{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px; min-height:20px;}
   .lib-chip{
     display:inline-flex; align-items:center; gap:6px; background:var(--paper); border:1px solid var(--line);
@@ -630,8 +557,6 @@
   table.debit-table input.input-invalid{border-color:var(--brick); background:color-mix(in srgb, var(--brick) 10%, var(--paper));}
   td.col-actions{width:36px; text-align:center;}
   .op-num-cell{text-align:center; font-family:'IBM Plex Mono',monospace; color:var(--text-dim); font-size:12px;}
-  .col-controle{text-align:center;}
-  .controle-check{width:17px; height:17px; cursor:pointer; accent-color:var(--sage);}
   .col-controle{text-align:center;}
   .controle-check{width:17px; height:17px; cursor:pointer; accent-color:var(--sage);}
   th.col-actions{width:36px;}
@@ -724,6 +649,191 @@
   button:focus-visible, input:focus-visible, textarea:focus-visible, .supplier-item:focus-visible{
     outline:2px solid var(--gold); outline-offset:2px;
   }
+
+  /* ---------- recherche universelle ---------- */
+  .home-search-wrap{margin-bottom:18px;}
+  .home-search-results{
+    margin-top:8px; background:var(--paper-raised); border:1px solid var(--line);
+    border-radius:8px; padding:10px 12px; max-height:420px; overflow-y:auto;
+  }
+  .search-group-title{
+    font-size:10.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--text-dim);
+    font-weight:600; margin:10px 0 5px;
+  }
+  .search-group-title:first-child{margin-top:0;}
+  .search-result-item{
+    display:flex; align-items:baseline; gap:8px; padding:7px 9px; border-radius:5px;
+    cursor:pointer; transition:background .1s ease;
+  }
+  .search-result-item:hover{background:color-mix(in srgb, var(--gold) 10%, transparent);}
+  .search-result-title{font-size:13px; color:var(--ink); font-weight:500;}
+  .search-result-meta{font-size:11px; color:var(--text-dim); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+
+  /* ---------- accueil : ajout rapide + grille de notes ---------- */
+  .home-greeting-icon{font-size:22px; margin-right:6px;}
+  .home-quick-add{display:flex; gap:8px; margin-bottom:22px;}
+  .home-quick-add input{
+    flex:1; padding:10px 12px; border:1px solid var(--line); border-radius:6px;
+    background:var(--paper-raised); color:var(--ink); font-family:'IBM Plex Sans'; font-size:13.5px;
+  }
+  .home-quick-add input:focus{outline:none; border-color:var(--gold);}
+  .dash-count-badge{
+    display:inline-block; background:var(--paper-raised); border:1px solid var(--line);
+    border-radius:10px; padding:1px 8px; font-size:10px; margin-left:6px; color:var(--text-dim);
+    font-family:'IBM Plex Mono',monospace;
+  }
+  .home-notes-grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(220px,1fr)); gap:12px;}
+  .home-note-card{
+    background:var(--paper-raised); border:1px solid var(--line); border-radius:8px;
+    padding:14px; cursor:pointer; transition:transform .12s ease, border-color .12s ease;
+  }
+  .home-note-card:hover{transform:translateY(-2px); border-color:var(--gold);}
+  .home-note-card-title{font-weight:600; font-size:13.5px; margin-bottom:4px; color:var(--ink);}
+  .home-note-card-preview{
+    font-size:12px; color:var(--text-dim); line-height:1.5;
+    display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
+  }
+  .home-note-card-date{font-size:10.5px; color:var(--text-dim); margin-top:8px; font-family:'IBM Plex Mono',monospace;}
+
+  /* ---------- suppression en deux temps ---------- */
+  .btn-confirm-armed{
+    background:var(--brick) !important; color:#fff !important; border-color:var(--brick) !important;
+    animation:confirmPulse 1s ease infinite;
+  }
+  @keyframes confirmPulse{
+    0%,100%{box-shadow:0 0 0 0 rgba(166,61,47,.45);}
+    50%{box-shadow:0 0 0 6px rgba(166,61,47,0);}
+  }
+
+  /* ---------- heures : statut de jour ---------- */
+  .hours-day-status-row{display:flex; gap:6px; flex-wrap:wrap; margin-bottom:6px;}
+  .hours-status-btn{
+    font-size:11px; padding:3px 10px; border-radius:20px; border:1px solid var(--line);
+    background:var(--paper-raised); color:var(--text-dim); cursor:pointer;
+    font-family:'IBM Plex Sans'; transition:all .12s ease;
+  }
+  .hours-status-btn:hover{border-color:var(--gold); color:var(--ink);}
+  .hours-status-btn.active{background:var(--gold); color:#fff; border-color:var(--gold); font-weight:600;}
+  .hours-day-off{
+    font-size:12.5px; color:var(--text-dim); font-style:italic; padding:6px 2px;
+  }
+
+  /* ---------- heures : rangement par annee / mois pliables ---------- */
+  .hours-year-header{
+    font-family:'Fraunces',serif; font-weight:600; font-size:15px; color:var(--ink);
+    margin:16px 0 6px; padding:4px 2px 8px; border-bottom:1px solid var(--line);
+    display:flex; align-items:center; gap:8px; cursor:pointer; user-select:none;
+  }
+  .hours-year-header:first-child{margin-top:0;}
+  .hours-year-header:hover{color:var(--gold);}
+  .hours-year-caret{font-size:11px; color:var(--text-dim); width:12px; flex-shrink:0;}
+  .hours-year-label{flex:1;}
+  .hours-year-total{font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:400; color:var(--text-dim);}
+  .hours-month-header{
+    font-size:10.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--text-dim);
+    font-weight:600; margin:10px 0 6px; display:flex; align-items:center; gap:6px;
+    cursor:pointer; user-select:none; padding:2px 0;
+  }
+  .hours-month-header:hover{color:var(--gold);}
+  .hours-month-caret{font-size:9px; width:10px; flex-shrink:0;}
+  .hours-month-label{flex:1;}
+  .hours-month-total{font-family:'IBM Plex Mono',monospace; text-transform:none; letter-spacing:0; font-weight:400;}
+
+  /* ---------- RPG : difficulte, bonus, boutique ---------- */
+  .rpg-difficulty-list{display:flex; flex-direction:column; gap:8px;}
+  .rpg-difficulty-btn{
+    background:var(--paper-raised); border:1px solid var(--line); border-radius:8px;
+    padding:10px 14px; cursor:pointer; text-align:left; font-family:'IBM Plex Sans'; color:var(--ink);
+    transition:border-color .12s ease, transform .12s ease;
+  }
+  .rpg-difficulty-btn:hover{border-color:var(--gold); transform:translateY(-1px);}
+  .rpg-difficulty-name{font-weight:700; font-size:14px; margin-bottom:2px;}
+  .rpg-difficulty-desc{font-size:11px; color:var(--text-dim);}
+  .rpg-shop-title{font-family:'Fraunces',serif; font-weight:600; font-size:16px; margin:6px 0; color:var(--ink);}
+  .rpg-shop-gold{font-size:13px; margin-bottom:10px; color:var(--ink);}
+  .rpg-shop-item{
+    display:flex; align-items:center; justify-content:space-between; gap:10px;
+    background:var(--paper-raised); border:1px solid var(--line); border-radius:6px;
+    padding:8px 10px; margin-bottom:6px;
+  }
+  .rpg-shop-item-info{text-align:left; min-width:0;}
+  .rpg-shop-item-name{font-weight:600; font-size:12.5px; color:var(--ink);}
+  .rpg-shop-item-desc{font-size:11px; color:var(--text-dim);}
+
+  /* ---------- pastilles + legendes (app) ---------- */
+  .cal-dot{display:inline-block; width:9px; height:9px; border-radius:50%; flex-shrink:0;}
+  .stats-legend{display:flex; gap:16px; margin-bottom:8px; font-size:11.5px; color:var(--text-dim);}
+  .stats-legend-item{display:inline-flex; align-items:center; gap:5px;}
+
+  /* ---------- barre de totaux : variante .total-item ---------- */
+  .totals-bar .total-item{display:flex; flex-direction:column;}
+  .totals-bar .total-item .lbl{font-size:10.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--text-dim);}
+  .totals-bar .total-item .val{font-family:'Fraunces',serif; font-weight:600; font-size:18px; color:var(--ink);}
+
+  /* ---------- budget ---------- */
+  .budget-add-form{
+    display:grid; grid-template-columns:1fr 130px; gap:8px; margin-top:14px;
+    background:var(--paper-raised); border:1px solid var(--line); border-radius:8px; padding:12px;
+  }
+  .budget-add-form input{
+    padding:9px 10px; border:1px solid var(--line); border-radius:5px;
+    background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans'; font-size:13px; min-width:0;
+  }
+  .budget-add-form input:focus{outline:none; border-color:var(--gold);}
+  .budget-type-row{display:flex; gap:6px; grid-column:1 / -1;}
+  .budget-cat-recap{margin-top:16px;}
+  .budget-cat-row{display:flex; align-items:center; gap:10px; margin-bottom:7px;}
+  .budget-cat-name{width:120px; font-size:12px; flex-shrink:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; color:var(--ink);}
+  .budget-cat-track{flex:1; height:10px; background:var(--paper-raised); border:1px solid var(--line); border-radius:5px; overflow:hidden;}
+  .budget-cat-fill{height:100%; background:var(--gold); border-radius:4px;}
+  .budget-cat-val{width:92px; text-align:right; font-family:'IBM Plex Mono',monospace; font-size:11.5px; flex-shrink:0; color:var(--ink);}
+  .budget-entry{
+    display:flex; align-items:center; gap:10px; padding:10px 12px;
+    background:var(--paper-raised); border:1px solid var(--line); border-radius:6px; margin-bottom:6px;
+  }
+  .budget-entry-icon{font-size:18px;}
+  .budget-entry-body{flex:1; min-width:0;}
+  .budget-entry-label{font-weight:600; font-size:13px; color:var(--ink);}
+  .budget-entry-meta{font-size:11px; color:var(--text-dim);}
+  .budget-entry-amount{font-family:'IBM Plex Mono',monospace; font-size:13.5px; font-weight:600; white-space:nowrap;}
+  .budget-entry-amount.expense{color:var(--brick);}
+  .budget-entry-amount.income{color:var(--sage);}
+
+  /* ---------- liste de courses ---------- */
+  .shopping-head{margin-bottom:16px;}
+  .shopping-head h2{font-family:'Fraunces',serif; font-size:24px; margin:0 0 4px; color:var(--ink);}
+  .shopping-head p{color:var(--text-dim); font-size:12.5px; margin:0;}
+  .shopping-list{margin-top:14px;}
+  .shopping-item{
+    display:flex; align-items:center; gap:12px; padding:11px 14px;
+    background:var(--paper-raised); border:1px solid var(--line); border-radius:6px;
+    margin-bottom:6px; cursor:pointer; transition:border-color .12s ease;
+  }
+  .shopping-item:hover{border-color:var(--gold);}
+  .shopping-check{
+    width:22px; height:22px; border:2px solid var(--line); border-radius:6px; flex-shrink:0;
+    display:flex; align-items:center; justify-content:center; font-size:14px; color:#fff;
+    transition:all .12s ease;
+  }
+  .shopping-item.checked .shopping-check{background:var(--sage); border-color:var(--sage);}
+  .shopping-item.checked .shopping-name{text-decoration:line-through; color:var(--text-dim);}
+  .shopping-name{flex:1; font-size:14px; color:var(--ink);}
+  .shopping-del{padding:2px 8px;}
+
+  /* ---------- statistiques ---------- */
+  .stats-cards{display:grid; grid-template-columns:repeat(auto-fill, minmax(150px,1fr)); gap:12px; margin-bottom:8px;}
+  .stats-bar-chart{
+    display:flex; align-items:flex-end; gap:6px; height:170px;
+    background:var(--paper-raised); border:1px solid var(--line); border-radius:8px;
+    padding:14px 12px 10px;
+  }
+  .stats-bar-col{flex:1; display:flex; flex-direction:column; align-items:center; gap:4px; height:100%; min-width:0;}
+  .stats-bar-val{font-size:9.5px; font-family:'IBM Plex Mono',monospace; color:var(--text-dim); height:12px; white-space:nowrap;}
+  .stats-bar-track{flex:1; width:100%; max-width:26px; display:flex; align-items:flex-end; justify-content:center; gap:2px;}
+  .stats-bar-fill{width:100%; background:var(--gold); border-radius:3px 3px 0 0; min-height:2px;}
+  .stats-bar-double .stats-bar-fill{width:calc(50% - 1px);}
+  .stats-bar-lbl{font-size:9px; color:var(--text-dim); text-transform:uppercase; letter-spacing:.03em;}
+
 </style>
 </head>
 <body>
@@ -766,6 +876,9 @@
     <button class="view-tab" data-view="notes" data-space="personal">Notes</button>
     <button class="view-tab" data-view="recipes" data-space="personal">Recettes</button>
     <button class="view-tab" data-view="hours" data-space="personal">Heures</button>
+    <button class="view-tab" data-view="budget" data-space="personal">Budget</button>
+    <button class="view-tab" data-view="shopping" data-space="personal">Courses</button>
+    <button class="view-tab" data-view="stats" data-space="personal">Statistiques</button>
   </div>
 </header>
 
@@ -892,6 +1005,27 @@
   <main class="main" id="hoursMainArea"></main>
 </div>
 
+<div class="layout" id="layoutBudget" style="display:none;">
+  <aside class="sidebar">
+    <div class="sidebar-head">
+      <span>Budget</span>
+      <button class="btn btn-line" id="btnBudgetToday" style="padding:5px 10px; font-size:12px;">Ce mois-ci</button>
+    </div>
+    <div id="budgetSummary" class="hours-summary"></div>
+    <div id="budgetMonthList"></div>
+  </aside>
+
+  <main class="main" id="budgetMainArea"></main>
+</div>
+
+<div class="layout" id="layoutShopping" style="display:none;">
+  <main class="main" id="shoppingMainArea" style="width:100%; max-width:640px; margin:0 auto;"></main>
+</div>
+
+<div class="layout" id="layoutStats" style="display:none;">
+  <main class="main" id="statsMainArea" style="width:100%; max-width:1100px; margin:0 auto;"></main>
+</div>
+
 <div id="toast" class="toast"></div>
 
 <div id="gameModal" class="modal-overlay" style="display:none;">
@@ -921,7 +1055,7 @@
 
     <div id="rpgBoostView" style="display:none;">
       <div class="rpg-shop-title" style="margin-bottom:4px;">Choisis un bonus de départ</div>
-      <div class="modal-sub" style="margin-bottom:14px;">Un seul au choix, tiré au hasard parmi tous les bonus possibles.</div>
+      <div class="modal-sub" style="margin-bottom:14px;">Un petit coup de pouce avant de descendre dans le donjon.</div>
       <div class="rpg-difficulty-list" id="rpgBoostList"></div>
     </div>
 
@@ -958,7 +1092,7 @@
 
     <div id="rpgShopView" style="display:none;">
       <div class="rpg-shop-title">🛒 Salle du marchand</div>
-      <div class="rpg-shop-gold">Or disponible : <strong id="rpgShopGold">0</strong> 🪙</div>
+      <div class="rpg-shop-gold">Ton or : <strong id="rpgShopGold">0</strong> 🪙</div>
       <div id="rpgShopItems"></div>
       <button class="btn btn-line" id="btnRpgShopLeave" style="margin-top:10px; width:100%;">↩ Retour au donjon</button>
     </div>
@@ -1185,7 +1319,10 @@
     { key:'spacing', label:'Répartition', space:'personal' },
     { key:'notes', label:'Notes', space:'personal' },
     { key:'recipes', label:'Recettes', space:'personal' },
-    { key:'hours', label:'Heures', space:'personal' }
+    { key:'hours', label:'Heures', space:'personal' },
+    { key:'budget', label:'Budget', space:'personal' },
+    { key:'shopping', label:'Courses', space:'personal' },
+    { key:'stats', label:'Statistiques', space:'personal' }
   ];
   let state = load();
   if(!Array.isArray(state.debitSheets)) state.debitSheets = [];
@@ -1196,6 +1333,8 @@
   if(!Array.isArray(state.notes)) state.notes = [];
   if(!Array.isArray(state.recipes)) state.recipes = [];
   if(!Array.isArray(state.hoursWeeks)) state.hoursWeeks = [];
+  if(!Array.isArray(state.budgetEntries)) state.budgetEntries = [];
+  if(!Array.isArray(state.shoppingItems)) state.shoppingItems = [];
   let currentSpace = state.settings.activeSpace || 'professional';
   let currentView = currentSpace === 'personal' ? 'trips' : 'suppliers';
   let selectedSupplierId = state.suppliers[0]?.id ?? null;
@@ -1207,11 +1346,14 @@
   let selectedNoteId = state.notes[0]?.id ?? null;
   let selectedRecipeId = state.recipes[0]?.id ?? null;
   let selectedWeekStart = mondayOf(new Date()).toISOString();
+  let hoursExpandedYears = null; // Set d'années dépliées dans la sidebar Heures ; initialisé au premier rendu
+  let hoursExpandedMonths = null; // Set de clés "année-mois" dépliées ; initialisé au premier rendu
   let openProducts = new Set();
   let openNewCommentFor = null;
   let openNewProductForm = false;
   let pendingPhotos = [];
   let pendingRating = 0;
+  let pendingText = '';
   let editingComment = null; // { pid, cid }
   let editRating = 0;
   let editText = '';
@@ -1431,6 +1573,11 @@
       });
       data.settings.hoursMigratedToChantiers = true;
     }
+    (data.hoursWeeks||[]).forEach(week => {
+      (week.days||[]).forEach(day => {
+        if(typeof day.status !== 'string') day.status = 'normal';
+      });
+    });
   }
   function save(){
     try{
@@ -1599,7 +1746,7 @@
     return { id: uid(), name:'', startHour:'', startMinute:'', endHour:'', endMinute:'' };
   }
   function newHoursDay(){
-    return { chantiers: [newChantierBlock()] };
+    return { status:'normal', chantiers: [newChantierBlock()] };
   }
   function newHoursWeek(weekStartIso){
     return { id: uid(), reference:'', weekStart: weekStartIso, days: Array.from({length:7}, () => newHoursDay()) };
@@ -1628,6 +1775,7 @@
     return Math.max(0, e-s);
   }
   function hoursDayMinutes(day){
+    if(day.status && day.status !== 'normal') return 0;
     return (day.chantiers||[]).reduce((sum,c) => sum + chantierBlockMinutes(c), 0);
   }
   function hoursWeekTotalMinutes(week){
@@ -1640,6 +1788,11 @@
       week.reference = generateHoursReference(state, week);
     }
     return week;
+  }
+  function hoursExpandDate(dateOrIso){
+    const d = new Date(dateOrIso);
+    if(hoursExpandedYears) hoursExpandedYears.add(String(d.getFullYear()));
+    if(hoursExpandedMonths) hoursExpandedMonths.add(`${d.getFullYear()}-${d.getMonth()}`);
   }
   function hoursSummary(){
     const viewedWeekStart = new Date(selectedWeekStart);
@@ -1673,11 +1826,13 @@
         const d = new Date(week.weekStart);
         d.setDate(d.getDate() + dayIdx);
         if(d.getFullYear() !== year || d.getMonth() !== month) return;
-        const chantiers = (day.chantiers||[]).filter(c => chantierBlockMinutes(c) > 0 || (c.name||'').trim());
-        if(!chantiers.length) return;
+        const status = day.status || 'normal';
+        const chantiers = status === 'normal' ? (day.chantiers||[]).filter(c => chantierBlockMinutes(c) > 0 || (c.name||'').trim()) : [];
+        if(!chantiers.length && status === 'normal') return;
         const key = d.toISOString().slice(0,10);
         dayData[key] = {
           date: d,
+          status,
           chantiers: chantiers.map(c => ({ name: (c.name||'').trim() || '(sans nom)', minutes: chantierBlockMinutes(c) })),
           totalMinutes: chantiers.reduce((s,c) => s + chantierBlockMinutes(c), 0)
         };
@@ -1723,13 +1878,15 @@
             const inMonth = d.getMonth() === month;
             const key = d.toISOString().slice(0,10);
             const entry = dayData[key];
+            const isOff = entry && entry.status && entry.status !== 'normal';
+            const offLabel = entry && entry.status === 'ferie' ? '🎉 Férié' : (entry && entry.status === 'conge' ? '🏖️ Congé' : '');
             return `
               <div class="agenda-day-row${entry?'':' agenda-day-empty'}">
                 <div class="agenda-day-label">${HOURS_DAY_NAMES[i]} ${d.toLocaleDateString('fr-FR',{day:'2-digit',month:'2-digit'})}${inMonth?'':' <span class=\"agenda-outside\">(hors mois)</span>'}</div>
                 <div class="agenda-day-content">
-                  ${entry ? entry.chantiers.map(c => `<div class="agenda-chantier"><span class="cal-dot" style="background:${chantierColor[c.name]};"></span>${esc(c.name)} · ${hoursFormatDuration(c.minutes/60)}</div>`).join('') : '<span class="agenda-empty-label">—</span>'}
+                  ${isOff ? `<span class="agenda-off-label">${offLabel}</span>` : (entry ? entry.chantiers.map(c => `<div class="agenda-chantier"><span class="cal-dot" style="background:${chantierColor[c.name]};"></span>${esc(c.name)} · ${hoursFormatDuration(c.minutes/60)}</div>`).join('') : '<span class="agenda-empty-label">—</span>')}
                 </div>
-                <div class="agenda-day-total">${entry ? hoursFormatDuration(entry.totalMinutes/60) : ''}</div>
+                <div class="agenda-day-total">${entry && !isOff ? hoursFormatDuration(entry.totalMinutes/60) : ''}</div>
               </div>`;
           }).join('')}
         </div>`;
@@ -1947,6 +2104,10 @@
     renderRecipeMain();
     renderHoursSidebar();
     renderHoursMain();
+    renderBudgetSidebar();
+    renderBudgetMain();
+    renderShoppingMain();
+    renderStatsMain();
     renderHomeMain();
   }
 
@@ -2172,7 +2333,7 @@
       </div>
       <div class="field">
         <label>Commentaire</label>
-        <textarea id="newCommentText" placeholder="Qualité, délai de livraison, conformité…"></textarea>
+        <textarea id="newCommentText" placeholder="Qualité, délai de livraison, conformité…">${esc(pendingText)}</textarea>
       </div>
       <div class="field">
         <label>Photos (optionnelles)</label>
@@ -2586,6 +2747,7 @@
   .agenda-day-content{flex:1; min-width:0;}
   .agenda-chantier{margin-bottom:2px; color:#333;}
   .agenda-empty-label{color:#ccc;}
+  .agenda-off-label{color:#8a6d1f; font-style:italic; font-weight:600;}
   .agenda-day-total{width:56px; flex-shrink:0; text-align:right; font-family:'Courier New',monospace; font-weight:700; color:#5F7455; font-size:10.5px;}
   .cal-dot{display:inline-block; width:7px; height:7px; border-radius:50%; margin-right:4px; vertical-align:middle; flex-shrink:0;}
   .cal-legend{display:flex; flex-wrap:wrap; gap:10px; margin-top:6px; margin-bottom:16px; font-size:9.5px; color:#444;}
@@ -4364,8 +4526,10 @@ ${bodyHtml}
         </div>
       </div>`;
   }
+  const HOURS_DAY_STATUS_LABELS = { normal:'Travail', ferie:'🎉 Férié', conge:'🏖️ Congé' };
   function renderDayRow(week, dayIdx){
     const day = week.days[dayIdx];
+    const status = day.status || 'normal';
     const dayDate = new Date(week.weekStart);
     dayDate.setDate(dayDate.getDate() + dayIdx);
     const minutes = hoursDayMinutes(day);
@@ -4373,12 +4537,19 @@ ${bodyHtml}
       <div class="hours-day-row" data-day-index="${dayIdx}">
         <div class="hours-day-head">
           <div><span class="hours-day-name">${HOURS_DAY_NAMES[dayIdx]}</span><span class="hours-day-date">${dayDate.toLocaleDateString('fr-FR',{day:'2-digit',month:'2-digit'})}</span></div>
-          <div class="hours-day-total ${minutes===0?'zero':''}">${minutes>0 ? hoursFormatDuration(minutes/60) : '—'}</div>
+          <div class="hours-day-total ${minutes===0?'zero':''}">${status !== 'normal' ? HOURS_DAY_STATUS_LABELS[status] : (minutes>0 ? hoursFormatDuration(minutes/60) : '—')}</div>
         </div>
-        <div class="hours-chantiers-wrap">
-          ${(day.chantiers||[]).map(c => renderChantierRow(dayIdx, c)).join('')}
-          <button type="button" class="hours-add-pause-btn" data-add-chantier="${dayIdx}">+ Ajouter un chantier</button>
+        <div class="hours-day-status-row">
+          ${Object.keys(HOURS_DAY_STATUS_LABELS).map(key => `
+            <button type="button" class="hours-status-btn ${status===key?'active':''}" data-day-status="${dayIdx}" data-status-value="${key}">${HOURS_DAY_STATUS_LABELS[key]}</button>
+          `).join('')}
         </div>
+        ${status === 'normal' ? `
+          <div class="hours-chantiers-wrap">
+            ${(day.chantiers||[]).map(c => renderChantierRow(dayIdx, c)).join('')}
+            <button type="button" class="hours-add-pause-btn" data-add-chantier="${dayIdx}">+ Ajouter un chantier</button>
+          </div>
+        ` : `<div class="hours-day-off">${HOURS_DAY_STATUS_LABELS[status]} — aucune heure à saisir ce jour-là.</div>`}
       </div>`;
   }
   function renderHoursSidebar(){
@@ -4392,21 +4563,63 @@ ${bodyHtml}
         <div class="hours-summary-card"><span class="lbl">Mois affiché</span><span class="val">${hoursFormatDuration(sum.monthHours)}</span></div>
       `;
     }
-    const sorted = state.hoursWeeks.slice().sort((a,b) => new Date(b.weekStart) - new Date(a.weekStart));
-    if(!sorted.length){
+    if(!state.hoursWeeks.length){
       list.innerHTML = `<div class="empty-side">Aucune semaine enregistrée pour l'instant.<br>Renseigne tes horaires dans la semaine affichée à droite.</div>`;
       return;
     }
-    list.innerHTML = sorted.map(w => {
-      const start = new Date(w.weekStart);
-      const end = new Date(start); end.setDate(end.getDate()+6);
-      const totalMin = hoursWeekTotalMinutes(w);
+    // Regroupe par année puis par mois (mois déterminé par le lundi de chaque semaine).
+    // Chaque année est une section repliable, pour vraiment "ranger" les semaines au fil du temps.
+    const years = {};
+    state.hoursWeeks.forEach(w => {
+      const d = new Date(w.weekStart);
+      const year = d.getFullYear(), month = d.getMonth();
+      if(!years[year]) years[year] = {};
+      if(!years[year][month]) years[year][month] = [];
+      years[year][month].push(w);
+    });
+    const yearKeys = Object.keys(years).sort((a,b) => b-a);
+    if(hoursExpandedYears === null){
+      hoursExpandedYears = new Set([String(new Date(selectedWeekStart).getFullYear())]);
+    }
+    if(hoursExpandedMonths === null){
+      const d0 = new Date(selectedWeekStart);
+      hoursExpandedMonths = new Set([`${d0.getFullYear()}-${d0.getMonth()}`]);
+    }
+    list.innerHTML = yearKeys.map(year => {
+      const expanded = hoursExpandedYears.has(year);
+      const yearTotalMin = Object.values(years[year]).flat().reduce((s,w) => s + hoursWeekTotalMinutes(w), 0);
+      const monthKeys = Object.keys(years[year]).sort((a,b) => b-a);
+      const monthsHtml = !expanded ? '' : monthKeys.map(month => {
+        const monthKey = `${year}-${month}`;
+        const monthExpanded = hoursExpandedMonths.has(monthKey);
+        const weeks = years[year][month].slice().sort((a,b) => new Date(b.weekStart) - new Date(a.weekStart));
+        const monthTotalMin = weeks.reduce((s,w) => s + hoursWeekTotalMinutes(w), 0);
+        const weeksHtml = !monthExpanded ? '' : weeks.map(w => {
+          const start = new Date(w.weekStart);
+          const end = new Date(start); end.setDate(end.getDate()+6);
+          const totalMin = hoursWeekTotalMinutes(w);
+          return `
+          <div class="sheet-item ${w.weekStart===selectedWeekStart?'active':''}" data-week="${w.weekStart}" tabindex="0">
+            <div class="name">Semaine du ${start.toLocaleDateString('fr-FR',{day:'2-digit',month:'2-digit'})} <span class="ref-badge">${esc(w.reference||'')}</span></div>
+            <div class="meta">au ${end.toLocaleDateString('fr-FR',{day:'2-digit',month:'2-digit',year:'numeric'})}</div>
+            <div class="meta"><strong>${hoursFormatDuration(totalMin/60)}</strong></div>
+          </div>`;
+        }).join('');
+        return `
+          <div class="hours-month-header" data-month-toggle="${monthKey}" tabindex="0" role="button" aria-expanded="${monthExpanded}">
+            <span class="hours-month-caret">${monthExpanded ? '▾' : '▸'}</span>
+            <span class="hours-month-label">${HOURS_MONTH_NAMES[month]}</span>
+            <span class="hours-month-total">${hoursFormatDuration(monthTotalMin/60)}</span>
+          </div>
+          ${weeksHtml}`;
+      }).join('');
       return `
-      <div class="sheet-item ${w.weekStart===selectedWeekStart?'active':''}" data-week="${w.weekStart}" tabindex="0">
-        <div class="name">Semaine du ${start.toLocaleDateString('fr-FR',{day:'2-digit',month:'2-digit'})} <span class="ref-badge">${esc(w.reference||'')}</span></div>
-        <div class="meta">au ${end.toLocaleDateString('fr-FR',{day:'2-digit',month:'2-digit',year:'numeric'})}</div>
-        <div class="meta"><strong>${hoursFormatDuration(totalMin/60)}</strong></div>
-      </div>`;
+        <div class="hours-year-header" data-year-toggle="${year}" tabindex="0" role="button" aria-expanded="${expanded}">
+          <span class="hours-year-caret">${expanded ? '▾' : '▸'}</span>
+          <span class="hours-year-label">${year}</span>
+          <span class="hours-year-total">${hoursFormatDuration(yearTotalMin/60)}</span>
+        </div>
+        ${monthsHtml}`;
     }).join('');
   }
   function renderHoursMain(){
@@ -4490,6 +4703,15 @@ ${bodyHtml}
     };
 
     main.onclick = e => {
+      const statusBtn = e.target.closest('[data-day-status]');
+      if(statusBtn){
+        const dayIdx = parseInt(statusBtn.dataset.dayStatus, 10);
+        week.days[dayIdx].status = statusBtn.dataset.statusValue;
+        persistWeekIfNeeded(week);
+        renderHoursMain();
+        renderHoursSidebar();
+        return;
+      }
       const addBtn = e.target.closest('[data-add-chantier]');
       if(addBtn){
         const dayIdx = parseInt(addBtn.dataset.addChantier, 10);
@@ -4514,14 +4736,381 @@ ${bodyHtml}
       const prev = new Date(selectedWeekStart);
       prev.setDate(prev.getDate() - 7);
       selectedWeekStart = mondayOf(prev).toISOString();
+      hoursExpandDate(selectedWeekStart);
       render();
     });
     document.getElementById('btnHoursNextWeek').addEventListener('click', () => {
       const next = new Date(selectedWeekStart);
       next.setDate(next.getDate() + 7);
       selectedWeekStart = mondayOf(next).toISOString();
+      hoursExpandDate(selectedWeekStart);
       render();
     });
+  }
+
+  // ---------- budget (espace calcul) ----------
+  const BUDGET_DEFAULT_CATEGORIES = ['Alimentation','Transport','Logement','Loisirs','Santé','Matériel','Autre'];
+  let selectedBudgetMonth = { year: new Date().getFullYear(), month: new Date().getMonth() };
+
+  function budgetEntriesForMonth(year, month){
+    return state.budgetEntries.filter(e => {
+      const d = new Date(e.date);
+      return d.getFullYear() === year && d.getMonth() === month;
+    });
+  }
+  function budgetMonthTotals(year, month){
+    let income = 0, expense = 0;
+    budgetEntriesForMonth(year, month).forEach(e => {
+      if(e.type === 'income') income += e.amount;
+      else expense += e.amount;
+    });
+    return { income, expense, balance: income - expense };
+  }
+  function budgetFmt(n){
+    return n.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' \u20ac';
+  }
+  function budgetKnownCategories(){
+    const cats = new Set(BUDGET_DEFAULT_CATEGORIES);
+    state.budgetEntries.forEach(e => { if(e.category) cats.add(e.category); });
+    return Array.from(cats).sort();
+  }
+
+  function renderBudgetSidebar(){
+    const list = document.getElementById('budgetMonthList');
+    const summaryWrap = document.getElementById('budgetSummary');
+    if(!list) return;
+    const tot = budgetMonthTotals(selectedBudgetMonth.year, selectedBudgetMonth.month);
+    if(summaryWrap){
+      summaryWrap.innerHTML = `
+        <div class="hours-summary-card"><span class="lbl">D\u00e9penses du mois</span><span class="val" style="color:var(--brick);">${budgetFmt(tot.expense)}</span></div>
+        <div class="hours-summary-card"><span class="lbl">Solde du mois</span><span class="val" style="color:${tot.balance>=0?'var(--sage)':'var(--brick)'};">${budgetFmt(tot.balance)}</span></div>
+      `;
+    }
+    if(!state.budgetEntries.length){
+      list.innerHTML = `<div class="empty-side">Aucune entr\u00e9e pour l'instant.<br>Ajoute ta premi\u00e8re d\u00e9pense \u00e0 droite.</div>`;
+      return;
+    }
+    const years = {};
+    state.budgetEntries.forEach(e => {
+      const d = new Date(e.date);
+      const y = d.getFullYear(), m = d.getMonth();
+      if(!years[y]) years[y] = new Set();
+      years[y].add(m);
+    });
+    list.innerHTML = Object.keys(years).sort((a,b) => b-a).map(year => {
+      const months = Array.from(years[year]).sort((a,b) => b-a);
+      return `
+        <div class="hours-year-header" style="cursor:default;"><span class="hours-year-label">${year}</span></div>
+        ${months.map(m => {
+          const t = budgetMonthTotals(parseInt(year,10), m);
+          const isActive = parseInt(year,10) === selectedBudgetMonth.year && m === selectedBudgetMonth.month;
+          return `
+          <div class="sheet-item ${isActive?'active':''}" data-budget-month="${year}-${m}" tabindex="0">
+            <div class="name">${HOURS_MONTH_NAMES[m]}</div>
+            <div class="meta">D\u00e9penses : ${budgetFmt(t.expense)}</div>
+            <div class="meta"><strong style="color:${t.balance>=0?'var(--sage)':'var(--brick)'};">${t.balance>=0?'+':''}${budgetFmt(t.balance)}</strong></div>
+          </div>`;
+        }).join('')}`;
+    }).join('');
+  }
+
+  function renderBudgetMain(){
+    const main = document.getElementById('budgetMainArea');
+    if(!main) return;
+    const { year, month } = selectedBudgetMonth;
+    const entries = budgetEntriesForMonth(year, month).sort((a,b) => new Date(b.date) - new Date(a.date));
+    const tot = budgetMonthTotals(year, month);
+    const cats = budgetKnownCategories();
+
+    const byCat = {};
+    entries.filter(e => e.type !== 'income').forEach(e => {
+      const c = e.category || 'Autre';
+      byCat[c] = (byCat[c]||0) + e.amount;
+    });
+    const catRecap = Object.entries(byCat).sort((a,b) => b[1]-a[1]);
+    const maxCat = Math.max(1, ...catRecap.map(([,v]) => v));
+
+    const todayIso = new Date().toISOString().slice(0,10);
+    const defaultDate = (year === new Date().getFullYear() && month === new Date().getMonth())
+      ? todayIso
+      : new Date(year, month, 15).toISOString().slice(0,10);
+
+    main.innerHTML = `
+      <div class="hours-week-nav">
+        <button class="btn btn-line" id="btnBudgetPrevMonth">\u25c0</button>
+        <div class="hours-week-title">
+          <div>${HOURS_MONTH_NAMES[month]} ${year}</div>
+        </div>
+        <button class="btn btn-line" id="btnBudgetNextMonth">\u25b6</button>
+      </div>
+
+      <div class="budget-add-form">
+        <input type="text" id="budgetLabel" placeholder="Libell\u00e9 (ex. Courses du samedi)">
+        <input type="number" id="budgetAmount" placeholder="Montant \u20ac" min="0" step="0.01" inputmode="decimal">
+        <input type="text" id="budgetCategory" list="budgetCategoriesList" placeholder="Cat\u00e9gorie">
+        <datalist id="budgetCategoriesList">${cats.map(c => `<option value="${esc(c)}">`).join('')}</datalist>
+        <input type="date" id="budgetDate" value="${defaultDate}">
+        <div class="budget-type-row">
+          <button type="button" class="hours-status-btn active" data-budget-type="expense">\ud83d\udcb8 D\u00e9pense</button>
+          <button type="button" class="hours-status-btn" data-budget-type="income">\ud83d\udcb0 Revenu</button>
+        </div>
+        <button class="btn btn-gold" id="btnBudgetAdd">+ Ajouter</button>
+      </div>
+
+      <div class="totals-bar">
+        <div class="total-item"><span class="lbl">Revenus</span><span class="val" style="color:var(--sage);">${budgetFmt(tot.income)}</span></div>
+        <div class="total-item"><span class="lbl">D\u00e9penses</span><span class="val" style="color:var(--brick);">${budgetFmt(tot.expense)}</span></div>
+        <div class="total-item"><span class="lbl">Solde</span><span class="val" style="color:${tot.balance>=0?'var(--sage)':'var(--brick)'};">${tot.balance>=0?'+':''}${budgetFmt(tot.balance)}</span></div>
+      </div>
+
+      ${catRecap.length ? `
+        <div class="budget-cat-recap">
+          <div class="dash-section-title">D\u00e9penses par cat\u00e9gorie</div>
+          ${catRecap.map(([cat, val]) => `
+            <div class="budget-cat-row">
+              <span class="budget-cat-name">${esc(cat)}</span>
+              <div class="budget-cat-track"><div class="budget-cat-fill" style="width:${(val/maxCat)*100}%;"></div></div>
+              <span class="budget-cat-val">${budgetFmt(val)}</span>
+            </div>
+          `).join('')}
+        </div>` : ''}
+
+      <div class="dash-section-title">Entr\u00e9es du mois <span class="dash-count-badge">${entries.length}</span></div>
+      ${entries.length ? entries.map(e => `
+        <div class="budget-entry">
+          <div class="budget-entry-icon">${e.type==='income'?'\ud83d\udcb0':'\ud83d\udcb8'}</div>
+          <div class="budget-entry-body">
+            <div class="budget-entry-label">${esc(e.label||'(sans libell\u00e9)')}</div>
+            <div class="budget-entry-meta">${new Date(e.date).toLocaleDateString('fr-FR',{day:'2-digit',month:'2-digit'})} \u00b7 ${esc(e.category||'Autre')}</div>
+          </div>
+          <div class="budget-entry-amount ${e.type==='income'?'income':'expense'}">${e.type==='income'?'+':'-'}${budgetFmt(e.amount)}</div>
+          <button class="btn btn-danger budget-entry-del" data-delete-budget="${e.id}" style="padding:2px 6px;">&times;</button>
+        </div>
+      `).join('') : `<div class="empty-side">Aucune entr\u00e9e ce mois-ci.</div>`}
+    `;
+
+    let budgetType = 'expense';
+    main.querySelectorAll('[data-budget-type]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        budgetType = btn.dataset.budgetType;
+        main.querySelectorAll('[data-budget-type]').forEach(b => b.classList.toggle('active', b === btn));
+      });
+    });
+    const addEntry = () => {
+      const label = document.getElementById('budgetLabel').value.trim();
+      const amount = parseFloat(document.getElementById('budgetAmount').value);
+      if(!label && !(amount > 0)){ toast('Renseigne un libell\u00e9 et un montant.'); return; }
+      if(!(amount > 0)){ toast('Renseigne un montant valide.'); return; }
+      const dateVal = document.getElementById('budgetDate').value || defaultDate;
+      state.budgetEntries.push({
+        id: uid(),
+        label,
+        amount,
+        category: document.getElementById('budgetCategory').value.trim() || 'Autre',
+        date: new Date(dateVal + 'T12:00:00').toISOString(),
+        type: budgetType
+      });
+      save();
+      const d = new Date(dateVal + 'T12:00:00');
+      selectedBudgetMonth = { year: d.getFullYear(), month: d.getMonth() };
+      render();
+      toast('Entr\u00e9e ajout\u00e9e \u2713');
+    };
+    document.getElementById('btnBudgetAdd').addEventListener('click', addEntry);
+    ['budgetLabel','budgetAmount','budgetCategory'].forEach(id => {
+      document.getElementById(id).addEventListener('keydown', e => { if(e.key === 'Enter') addEntry(); });
+    });
+    main.querySelectorAll('[data-delete-budget]').forEach(btn => {
+      bindConfirmDeleteButton(btn, () => {
+        state.budgetEntries = state.budgetEntries.filter(x => x.id !== btn.dataset.deleteBudget);
+        save();
+        render();
+      }, '?');
+    });
+    document.getElementById('btnBudgetPrevMonth').addEventListener('click', () => {
+      const d = new Date(selectedBudgetMonth.year, selectedBudgetMonth.month - 1, 1);
+      selectedBudgetMonth = { year: d.getFullYear(), month: d.getMonth() };
+      renderBudgetSidebar();
+      renderBudgetMain();
+    });
+    document.getElementById('btnBudgetNextMonth').addEventListener('click', () => {
+      const d = new Date(selectedBudgetMonth.year, selectedBudgetMonth.month + 1, 1);
+      selectedBudgetMonth = { year: d.getFullYear(), month: d.getMonth() };
+      renderBudgetSidebar();
+      renderBudgetMain();
+    });
+  }
+
+  // ---------- liste de courses (espace calcul) ----------
+  function renderShoppingMain(){
+    const main = document.getElementById('shoppingMainArea');
+    if(!main) return;
+    const items = state.shoppingItems;
+    const remaining = items.filter(i => !i.checked).length;
+    const checkedCount = items.length - remaining;
+    main.innerHTML = `
+      <div class="shopping-head">
+        <h2>\ud83d\uded2 Liste de courses</h2>
+        <p>${items.length ? `${remaining} article${remaining>1?'s':''} restant${remaining>1?'s':''}` : 'Liste vide'}</p>
+      </div>
+      <div class="home-quick-add">
+        <input type="text" id="shoppingNewItem" placeholder="Ajouter un article\u2026 (Entr\u00e9e pour valider)">
+        <button class="btn btn-gold" id="btnShoppingAdd">+ Ajouter</button>
+      </div>
+      <div class="shopping-list">
+        ${items.map(item => `
+          <div class="shopping-item ${item.checked?'checked':''}" data-shopping-toggle="${item.id}">
+            <span class="shopping-check">${item.checked?'\u2713':''}</span>
+            <span class="shopping-name">${esc(item.name)}</span>
+            <button class="btn btn-danger shopping-del" data-delete-shopping="${item.id}">&times;</button>
+          </div>
+        `).join('')}
+      </div>
+      ${checkedCount > 0 ? `<button class="btn btn-line" id="btnShoppingClearChecked" style="margin-top:14px;">Retirer les ${checkedCount} article${checkedCount>1?'s':''} coch\u00e9${checkedCount>1?'s':''}</button>` : ''}
+    `;
+
+    const addItem = () => {
+      const input = document.getElementById('shoppingNewItem');
+      const name = input.value.trim();
+      if(!name) return;
+      state.shoppingItems.push({ id: uid(), name, checked: false });
+      save();
+      render();
+      const newInput = document.getElementById('shoppingNewItem');
+      if(newInput) newInput.focus();
+    };
+    document.getElementById('btnShoppingAdd').addEventListener('click', addItem);
+    document.getElementById('shoppingNewItem').addEventListener('keydown', e => { if(e.key === 'Enter') addItem(); });
+    main.querySelectorAll('[data-shopping-toggle]').forEach(el => {
+      el.addEventListener('click', e => {
+        if(e.target.closest('[data-delete-shopping]')) return;
+        const item = state.shoppingItems.find(i => i.id === el.dataset.shoppingToggle);
+        if(!item) return;
+        item.checked = !item.checked;
+        save();
+        render();
+      });
+    });
+    main.querySelectorAll('[data-delete-shopping]').forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.stopPropagation();
+        state.shoppingItems = state.shoppingItems.filter(i => i.id !== btn.dataset.deleteShopping);
+        save();
+        render();
+      });
+    });
+    const clearBtn = document.getElementById('btnShoppingClearChecked');
+    if(clearBtn) clearBtn.addEventListener('click', () => {
+      state.shoppingItems = state.shoppingItems.filter(i => !i.checked);
+      save();
+      render();
+    });
+  }
+
+  // ---------- statistiques (espace calcul) ----------
+  function statsLastMonths(n){
+    const months = [];
+    const now = new Date();
+    for(let i = n-1; i >= 0; i--){
+      const d = new Date(now.getFullYear(), now.getMonth() - i, 1);
+      months.push({ year: d.getFullYear(), month: d.getMonth() });
+    }
+    return months;
+  }
+  function statsHoursForMonth(year, month){
+    let min = 0;
+    state.hoursWeeks.forEach(w => {
+      (w.days||[]).forEach((day, dayIdx) => {
+        const d = new Date(w.weekStart);
+        d.setDate(d.getDate() + dayIdx);
+        if(d.getFullYear() === year && d.getMonth() === month) min += hoursDayMinutes(day);
+      });
+    });
+    return min;
+  }
+  function renderStatsMain(){
+    const main = document.getElementById('statsMainArea');
+    if(!main) return;
+    const months = statsLastMonths(12);
+
+    const hoursData = months.map(m => ({ ...m, minutes: statsHoursForMonth(m.year, m.month) }));
+    const maxHours = Math.max(1, ...hoursData.map(d => d.minutes));
+    const hasHours = hoursData.some(d => d.minutes > 0);
+
+    const budgetData = months.map(m => ({ ...m, ...budgetMonthTotals(m.year, m.month) }));
+    const maxBudget = Math.max(1, ...budgetData.map(d => Math.max(d.expense, d.income)));
+    const hasBudget = budgetData.some(d => d.expense > 0 || d.income > 0);
+
+    const cutoff = new Date(months[0].year, months[0].month, 1);
+    const byChantier = {};
+    state.hoursWeeks.forEach(w => {
+      (w.days||[]).forEach((day, dayIdx) => {
+        if(day.status && day.status !== 'normal') return;
+        const d = new Date(w.weekStart);
+        d.setDate(d.getDate() + dayIdx);
+        if(d < cutoff) return;
+        (day.chantiers||[]).forEach(c => {
+          const minu = chantierBlockMinutes(c);
+          if(minu <= 0) return;
+          const name = (c.name||'').trim() || '(sans nom)';
+          byChantier[name] = (byChantier[name]||0) + minu;
+        });
+      });
+    });
+    const chantierRecap = Object.entries(byChantier).sort((a,b) => b[1]-a[1]).slice(0, 8);
+    const maxChantier = Math.max(1, ...chantierRecap.map(([,v]) => v));
+
+    const monthShort = m => HOURS_MONTH_NAMES[m.month].slice(0,3);
+
+    main.innerHTML = `
+      <div class="shopping-head">
+        <h2>\ud83d\udcca Statistiques</h2>
+        <p>Sur les 12 derniers mois</p>
+      </div>
+
+      <div class="stats-cards">
+        <div class="dash-card" style="cursor:default;"><div class="dash-card-icon">\u23f1\ufe0f</div><div class="dash-card-count">${hoursFormatDuration(hoursData.reduce((s,d)=>s+d.minutes,0)/60)}</div><div class="dash-card-label">Heures travaill\u00e9es</div></div>
+        <div class="dash-card" style="cursor:default;"><div class="dash-card-icon">\ud83d\udcb8</div><div class="dash-card-count" style="font-size:20px;">${budgetFmt(budgetData.reduce((s,d)=>s+d.expense,0))}</div><div class="dash-card-label">D\u00e9penses totales</div></div>
+        <div class="dash-card" style="cursor:default;"><div class="dash-card-icon">\ud83c\udfed</div><div class="dash-card-count">${state.suppliers.length}</div><div class="dash-card-label">Fournisseurs</div></div>
+        <div class="dash-card" style="cursor:default;"><div class="dash-card-icon">\ud83d\udcc1</div><div class="dash-card-count">${state.folders.length}</div><div class="dash-card-label">Dossiers</div></div>
+      </div>
+
+      <div class="dash-section-title">Heures travaill\u00e9es par mois</div>
+      ${hasHours ? `
+        <div class="stats-bar-chart">
+          ${hoursData.map(d => `
+            <div class="stats-bar-col" title="${HOURS_MONTH_NAMES[d.month]} ${d.year} : ${hoursFormatDuration(d.minutes/60)}">
+              <div class="stats-bar-val">${d.minutes>0 ? Math.round(d.minutes/60)+'h' : ''}</div>
+              <div class="stats-bar-track"><div class="stats-bar-fill" style="height:${Math.max(2,(d.minutes/maxHours)*100)}%;"></div></div>
+              <div class="stats-bar-lbl">${monthShort(d)}</div>
+            </div>
+          `).join('')}
+        </div>` : `<div class="empty-side">Aucune heure enregistr\u00e9e \u2014 remplis l'onglet Heures pour voir ce graphique.</div>`}
+
+      <div class="dash-section-title">Budget par mois</div>
+      ${hasBudget ? `
+        <div class="stats-legend"><span class="stats-legend-item"><span class="cal-dot" style="background:var(--sage);"></span>Revenus</span><span class="stats-legend-item"><span class="cal-dot" style="background:var(--brick);"></span>D\u00e9penses</span></div>
+        <div class="stats-bar-chart">
+          ${budgetData.map(d => `
+            <div class="stats-bar-col" title="${HOURS_MONTH_NAMES[d.month]} ${d.year} : +${budgetFmt(d.income)} / -${budgetFmt(d.expense)}">
+              <div class="stats-bar-track stats-bar-double">
+                <div class="stats-bar-fill" style="height:${Math.max(2,(d.income/maxBudget)*100)}%; background:var(--sage);"></div>
+                <div class="stats-bar-fill" style="height:${Math.max(2,(d.expense/maxBudget)*100)}%; background:var(--brick);"></div>
+              </div>
+              <div class="stats-bar-lbl">${monthShort(d)}</div>
+            </div>
+          `).join('')}
+        </div>` : `<div class="empty-side">Aucune entr\u00e9e de budget \u2014 remplis l'onglet Budget pour voir ce graphique.</div>`}
+
+      <div class="dash-section-title">Heures par chantier</div>
+      ${chantierRecap.length ? chantierRecap.map(([name, minu], i) => `
+        <div class="budget-cat-row">
+          <span class="budget-cat-name">${esc(name)}</span>
+          <div class="budget-cat-track"><div class="budget-cat-fill" style="width:${(minu/maxChantier)*100}%; background:${HOURS_CHANTIER_COLORS[i % HOURS_CHANTIER_COLORS.length]};"></div></div>
+          <span class="budget-cat-val">${hoursFormatDuration(minu/60)}</span>
+        </div>
+      `).join('') : `<div class="empty-side">Aucun chantier renseign\u00e9 sur la p\u00e9riode.</div>`}
+    `;
   }
 
   // ---------- easter egg : jeu caché (mini RPG) ----------
@@ -5050,14 +5639,95 @@ ${bodyHtml}
     if(!def) return;
     switchSpace(def.space);
     switchView(type);
-    if(type === 'debit'){ selectedSheetId = id; }
+    if(type === 'suppliers'){ if(id) selectedSupplierId = id; }
+    else if(type === 'debit'){ selectedSheetId = id; }
     else if(type === 'mfg'){ selectedMfgId = id; }
     else if(type === 'folders'){ selectedFolderId = id; }
     else if(type === 'trips'){ selectedTripId = id; }
     else if(type === 'spacing'){ selectedSpacingId = id; }
     else if(type === 'notes'){ selectedNoteId = id; }
     else if(type === 'recipes'){ selectedRecipeId = id; }
+    else if(type === 'hours'){ if(id){ selectedWeekStart = id; hoursExpandDate(id); } }
+    else if(type === 'budget'){ if(id){ const parts = id.split('-'); selectedBudgetMonth = { year: parseInt(parts[0],10), month: parseInt(parts[1],10) }; } }
     render();
+  }
+
+  // ---------- recherche universelle (accueil) ----------
+  function universalSearchResults(qRaw){
+    const q = qRaw.trim().toLowerCase();
+    if(q.length < 2) return [];
+    const has = s => (s||'').toLowerCase().includes(q);
+    const groups = [];
+    const push = (label, icon, items) => { if(items.length) groups.push({ label, icon, items }); };
+
+    push('Fournisseurs', '🏭', state.suppliers.filter(s => {
+      if(has(s.name) || has(s.category)) return true;
+      return (s.products||[]).some(p => has(p.name) || (p.comments||[]).some(cm => has(cm.text)));
+    }).slice(0,5).map(s => ({ type:'suppliers', id:s.id, title:s.name||'(sans nom)', meta:s.category||'' })));
+
+    push('Fiches de débit', '📋', state.debitSheets.filter(sh => has(sh.title)||has(sh.client)||has(sh.reference))
+      .slice(0,5).map(sh => ({ type:'debit', id:sh.id, title:sh.title||'(sans titre)', meta:[sh.reference, sh.client].filter(Boolean).join(' · ') })));
+
+    push('Analyses de fabrication', '⚙️', state.manufacturingSheets.filter(sh => has(sh.title)||has(sh.client)||has(sh.reference))
+      .slice(0,5).map(sh => ({ type:'mfg', id:sh.id, title:sh.title||'(sans titre)', meta:[sh.reference, sh.client].filter(Boolean).join(' · ') })));
+
+    push('Dossiers', '📁', state.folders.filter(f => has(f.title)||has(f.client)||has(f.note))
+      .slice(0,5).map(f => ({ type:'folders', id:f.id, title:f.title||'(sans titre)', meta:f.client||'' })));
+
+    push('Trajets', '🚗', state.trips.filter(t => has(t.title)||has(t.note))
+      .slice(0,5).map(t => ({ type:'trips', id:t.id, title:t.title||'(sans titre)', meta:'' })));
+
+    push('Répartitions', '📐', state.spacings.filter(s => has(s.title)||has(s.note))
+      .slice(0,5).map(s => ({ type:'spacing', id:s.id, title:s.title||'(sans titre)', meta:'' })));
+
+    push('Notes', '📝', state.notes.filter(n => has(n.title)||has(n.content))
+      .slice(0,5).map(n => ({ type:'notes', id:n.id, title:noteDisplayTitle(n), meta:relativeDate(n.updatedAt||n.createdAt) })));
+
+    push('Recettes', '🍳', state.recipes.filter(r => has(r.title) || (r.ingredients||[]).some(i => has(i.text)))
+      .slice(0,5).map(r => ({ type:'recipes', id:r.id, title:r.title||'(sans titre)', meta:'' })));
+
+    push('Heures', '⏱️', state.hoursWeeks.filter(w => has(w.reference) || (w.days||[]).some(d => (d.chantiers||[]).some(ch => has(ch.name))))
+      .slice(0,5).map(w => {
+        const chantiers = new Set();
+        (w.days||[]).forEach(d => (d.chantiers||[]).forEach(ch => { if(has(ch.name)) chantiers.add(ch.name); }));
+        return { type:'hours', id:w.weekStart, title:'Semaine du ' + new Date(w.weekStart).toLocaleDateString('fr-FR',{day:'2-digit',month:'2-digit',year:'numeric'}), meta: Array.from(chantiers).slice(0,2).join(', ') || (w.reference||'') };
+      }));
+
+    push('Budget', '💸', state.budgetEntries.filter(e => has(e.label)||has(e.category))
+      .slice(0,5).map(e => {
+        const d = new Date(e.date);
+        return { type:'budget', id:`${d.getFullYear()}-${d.getMonth()}`, title:e.label||'(sans libellé)', meta:budgetFmt(e.amount) + ' · ' + HOURS_MONTH_NAMES[d.getMonth()] + ' ' + d.getFullYear() };
+      }));
+
+    push('Courses', '🛒', state.shoppingItems.filter(i => has(i.name))
+      .slice(0,5).map(i => ({ type:'shopping', id:'', title:i.name, meta:i.checked ? 'coché ✓' : '' })));
+
+    return groups;
+  }
+
+  function renderHomeSearchResults(){
+    const wrap = document.getElementById('homeSearchResults');
+    const input = document.getElementById('homeSearchInput');
+    if(!wrap || !input) return;
+    const q = input.value;
+    if(q.trim().length < 2){ wrap.innerHTML = ''; wrap.style.display = 'none'; return; }
+    const groups = universalSearchResults(q);
+    wrap.style.display = 'block';
+    if(!groups.length){
+      wrap.innerHTML = `<div class="empty-side" style="padding:4px 2px;">Aucun résultat pour « ${esc(q.trim())} ».</div>`;
+      return;
+    }
+    wrap.innerHTML = groups.map(g => `
+      <div class="search-group-title">${g.icon} ${g.label}</div>
+      ${g.items.map(it => `
+        <div class="search-result-item" data-search-type="${it.type}" data-search-id="${esc(String(it.id))}">
+          <span class="search-result-title">${esc(it.title)}</span>
+          ${it.meta ? `<span class="search-result-meta">${esc(it.meta)}</span>` : ''}
+        </div>`).join('')}
+    `).join('');
+    wrap.querySelectorAll('[data-search-type]').forEach(el => {
+      el.addEventListener('click', () => goToItem(el.dataset.searchType, el.dataset.searchId));
+    });
   }
   function renderHomeMain(){
     const main = document.getElementById('homeMainArea');
@@ -5074,6 +5744,11 @@ ${bodyHtml}
           <h2>${companyName}</h2>
           <p>${greetingDate}</p>
         </div>
+      </div>
+
+      <div class="home-search-wrap">
+        <input class="search" id="homeSearchInput" placeholder="🔍 Rechercher partout : fournisseurs, notes, dossiers, heures…" autocomplete="off" style="margin-bottom:0;">
+        <div id="homeSearchResults" class="home-search-results" style="display:none;"></div>
       </div>
 
       <div class="home-quick-add">
@@ -5110,6 +5785,12 @@ ${bodyHtml}
     };
     document.getElementById('btnHomeQuickAdd').addEventListener('click', quickAdd);
     quickInput.addEventListener('keydown', e => { if(e.key === 'Enter'){ e.preventDefault(); quickAdd(); } });
+
+    const searchInputHome = document.getElementById('homeSearchInput');
+    searchInputHome.addEventListener('input', renderHomeSearchResults);
+    searchInputHome.addEventListener('keydown', e => {
+      if(e.key === 'Escape'){ searchInputHome.value = ''; renderHomeSearchResults(); }
+    });
 
     main.querySelectorAll('[data-goto-space]').forEach(card => {
       card.addEventListener('click', () => {
@@ -5276,7 +5957,7 @@ ${bodyHtml}
 
   // ---------- events ----------
 
-  const VIEW_LAYOUT_MAP = { home:'layoutHome', suppliers:'layoutSuppliers', debit:'layoutDebit', mfg:'layoutMfg', folders:'layoutFolders', trips:'layoutTrips', spacing:'layoutSpacing', notes:'layoutNotes', recipes:'layoutRecipes', hours:'layoutHours' };
+  const VIEW_LAYOUT_MAP = { home:'layoutHome', suppliers:'layoutSuppliers', debit:'layoutDebit', mfg:'layoutMfg', folders:'layoutFolders', trips:'layoutTrips', spacing:'layoutSpacing', notes:'layoutNotes', recipes:'layoutRecipes', hours:'layoutHours', budget:'layoutBudget', shopping:'layoutShopping', stats:'layoutStats' };
   const SPACE_DEFAULT_VIEW = { professional:'suppliers', personal:'trips' };
 
   function switchView(viewName){
@@ -5489,15 +6170,55 @@ ${bodyHtml}
   });
 
   document.getElementById('hoursList').addEventListener('click', e => {
+    const yearHeader = e.target.closest('[data-year-toggle]');
+    if(yearHeader){
+      const year = yearHeader.dataset.yearToggle;
+      if(hoursExpandedYears.has(year)) hoursExpandedYears.delete(year);
+      else hoursExpandedYears.add(year);
+      renderHoursSidebar();
+      return;
+    }
+    const monthHeader = e.target.closest('[data-month-toggle]');
+    if(monthHeader){
+      const monthKey = monthHeader.dataset.monthToggle;
+      if(hoursExpandedMonths.has(monthKey)) hoursExpandedMonths.delete(monthKey);
+      else hoursExpandedMonths.add(monthKey);
+      renderHoursSidebar();
+      return;
+    }
     const item = e.target.closest('[data-week]');
     if(!item) return;
     selectedWeekStart = item.dataset.week;
     render();
   });
+  document.getElementById('hoursList').addEventListener('keydown', e => {
+    if(e.key !== 'Enter' && e.key !== ' ') return;
+    const toggleTarget = e.target.closest('[data-year-toggle], [data-month-toggle]');
+    if(!toggleTarget) return;
+    e.preventDefault();
+    toggleTarget.click();
+  });
 
   document.getElementById('btnHoursToday').addEventListener('click', () => {
     selectedWeekStart = mondayOf(new Date()).toISOString();
+    hoursExpandDate(selectedWeekStart);
     render();
+  });
+
+  document.getElementById('budgetMonthList').addEventListener('click', e => {
+    const item = e.target.closest('[data-budget-month]');
+    if(!item) return;
+    const [y, m] = item.dataset.budgetMonth.split('-');
+    selectedBudgetMonth = { year: parseInt(y, 10), month: parseInt(m, 10) };
+    renderBudgetSidebar();
+    renderBudgetMain();
+  });
+
+  document.getElementById('btnBudgetToday').addEventListener('click', () => {
+    const now = new Date();
+    selectedBudgetMonth = { year: now.getFullYear(), month: now.getMonth() };
+    renderBudgetSidebar();
+    renderBudgetMain();
   });
 
   document.getElementById('btnManageLibraries').addEventListener('click', openLibraryModal);
@@ -5872,7 +6593,7 @@ ${bodyHtml}
     main.querySelectorAll('[data-open-comment]').forEach(el => {
       el.addEventListener('click', () => {
         openNewCommentFor = el.dataset.openComment;
-        pendingRating = 0; pendingPhotos = [];
+        pendingRating = 0; pendingPhotos = []; pendingText = '';
         editingComment = null;
         render();
       });
@@ -5880,7 +6601,7 @@ ${bodyHtml}
 
     const cancelCommentBtn = document.getElementById('btnCancelComment');
     if(cancelCommentBtn) cancelCommentBtn.addEventListener('click', () => {
-      openNewCommentFor = null; pendingPhotos = []; pendingRating = 0; hasUnsavedChanges = false; render();
+      openNewCommentFor = null; pendingPhotos = []; pendingRating = 0; pendingText = ''; hasUnsavedChanges = false; render();
     });
 
     const starPicker = document.getElementById('starPicker');
@@ -5891,6 +6612,11 @@ ${bodyHtml}
       render();
       const ta = document.getElementById('newCommentText');
       if(ta) ta.focus();
+    });
+
+    const newCommentTextarea = document.getElementById('newCommentText');
+    if(newCommentTextarea) newCommentTextarea.addEventListener('input', () => {
+      pendingText = newCommentTextarea.value;
     });
 
     const photoInput = document.getElementById('newCommentPhoto');
@@ -5926,7 +6652,7 @@ ${bodyHtml}
         photos: pendingPhotos.slice(),
         date: new Date().toISOString()
       });
-      openNewCommentFor = null; pendingPhotos = []; pendingRating = 0;
+      openNewCommentFor = null; pendingPhotos = []; pendingRating = 0; pendingText = '';
       save(); render();
     });
 
@@ -6090,9 +6816,10 @@ ${bodyHtml}
   switchSpace('home');
   render();
   warnLocalStorageOnce();
+  try{ localStorage.removeItem(RPG_SAVE_KEY); }catch(e){} // nettoyage : le jeu ne persiste plus
 
   // Alerte avant de fermer l'onglet si des champs ont été modifiés sans être encore enregistrés
-  const DIRTY_FIELD_SELECTOR = '.name-input, .cat-input, .contact-input, #sheetTitle, #sheetClient, #sheetDate, #sheetNote, #sheetOperator, #sheetReference, #sheetRowsBody input, #newCommentText, #editCommentText, #newProductName, #mfgTitle, #mfgClient, #mfgDate, #mfgNote, #mfgOperator, #mfgReference, #mfgOperationsBody input, #folderTitle, #folderClient, #folderDate, #folderNote, #tripTitle, #tripDate, #tripDistance, #tripConsumption, #tripFuelPrice, #tripToll, #tripNote, #spacingTitle, #spacingDate, #spacingLength, #spacingWidth, #spacingCount, #spacingNote, #noteTitle, #noteContent, #recipeTitle, #recipeComments, [data-ingredient-text]';
+  const DIRTY_FIELD_SELECTOR = '.name-input, .cat-input, .contact-input, #sheetTitle, #sheetClient, #sheetDate, #sheetNote, #sheetOperator, #sheetReference, #sheetRowsBody input, #newCommentText, #editCommentText, #newProductName, #mfgTitle, #mfgClient, #mfgDate, #mfgNote, #mfgOperator, #mfgReference, #mfgOperationsBody input, #folderTitle, #folderClient, #folderDate, #folderNote, #tripTitle, #tripDate, #tripDistance, #tripConsumption, #tripFuelPrice, #tripToll, #tripNote, #spacingTitle, #spacingDate, #spacingLength, #spacingWidth, #spacingCount, #spacingNote, #noteTitle, #noteContent, #recipeTitle, #recipeComments, [data-ingredient-text], .hours-chantier-name';
   document.body.addEventListener('input', e => {
     if(e.target.matches && e.target.matches(DIRTY_FIELD_SELECTOR)) hasUnsavedChanges = true;
   });
@@ -6101,6 +6828,18 @@ ${bodyHtml}
       e.preventDefault();
       e.returnValue = '';
     }
+  });
+
+  // Échap ferme la visionneuse photo ou la modale actuellement ouverte, où qu'on soit dans l'app
+  document.addEventListener('keydown', e => {
+    if(e.key !== 'Escape') return;
+    const lightbox = document.querySelector('.lightbox');
+    if(lightbox){ lightbox.remove(); return; }
+    if(document.getElementById('gameModal').style.display === 'flex'){ closeGameModal(); return; }
+    if(document.getElementById('featuresModal').style.display === 'flex'){ closeFeaturesModal(); return; }
+    if(document.getElementById('settingsModal').style.display === 'flex'){ closeSettingsModal(); return; }
+    if(document.getElementById('companyModal').style.display === 'flex'){ closeCompanyModal(); return; }
+    if(document.getElementById('libraryModal').style.display === 'flex'){ closeLibraryModal(); return; }
   });
 })();
 </script>
