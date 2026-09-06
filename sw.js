@@ -25,6 +25,7 @@ const APP_SHELL = [
   './js/07-budget-shopping-stats-rpg.js',
   './js/08-home-search-settings-switchview.js',
   './js/09-import-export-auth-bootstrap.js',
+  './js/10-export-autocad.js',
 ];
 
 self.addEventListener('install', event => {
